@@ -1,0 +1,34 @@
+{
+  "name": "Kshitij Zutshi Portfolio",
+  "description": "Professional portfolio website with Sciemo-inspired design, animated geometric network visualization, interactive feature modals, scroll-based timeline, and GitHub integration.",
+  "tech_stack": [
+    "React 18",
+    "TypeScript",
+    "Vite",
+    "Framer Motion",
+    "CSS Variables",
+    "Lucide React"
+  ],
+  "category": "Personal Website",
+  "status": "complete",
+  "features": [
+    "Animated geometric network (blended background)",
+    "Interactive feature cards with modal dialogs",
+    "Scroll-linked timeline for experience",
+    "GitHub stats integration (165 repos, 151+ PRs)",
+    "University logos in education section",
+    "Download Resume functionality",
+    "Responsive design",
+    "Contact form"
+  ],
+  "links": {
+    "linkedin": "https://www.linkedin.com/in/kshitij-zutshi/",
+    "github": "https://github.com/kshitijzutshi"
+  },
+  "deployment": {
+    "platform": "Vercel",
+    "configured": true
+  },
+  "created_at": "2025-12-25",
+  "author": "Kshitij Zutshi"
+}

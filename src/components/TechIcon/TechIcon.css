@@ -1,0 +1,28 @@
+.tech-icon {
+  border-radius: 4px;
+}
+
+.tech-icon-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: var(--color-bg-secondary);
+  color: var(--color-text-muted);
+  font-weight: 600;
+  font-family: var(--font-heading);
+}
+
+.tech-icon-stack {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.tech-icon-more {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  font-family: var(--font-heading);
+}
+

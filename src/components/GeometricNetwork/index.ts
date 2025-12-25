@@ -1,0 +1,2 @@
+export { GeometricNetwork } from './GeometricNetwork';
+
