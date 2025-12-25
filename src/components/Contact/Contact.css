@@ -1,95 +1,123 @@
 .contact {
-  background: var(--color-bg);
+  background: var(--color-bg-secondary);
 }
 
-.contact-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  max-width: 900px;
+.contact-content {
+  max-width: 800px;
 }
 
 .contact-intro {
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.8;
   color: var(--color-text-secondary);
-  margin-bottom: 32px;
+  margin-bottom: 40px;
+  max-width: 600px;
 }
 
-.contact-details {
-  margin-bottom: 32px;
-}
-
-.contact-detail {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-  font-size: 15px;
-  color: var(--color-text);
-  margin-bottom: 12px;
-}
-
-.contact-detail a {
-  color: var(--color-text);
-}
-
-.contact-detail:hover {
-  color: var(--color-accent);
-}
-
-.contact-socials {
-  display: flex;
+/* Contact Cards Grid */
+.contact-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
 }
 
-.social-link {
+.contact-card {
   display: flex;
   align-items: center;
-  gap: 8px;
-  padding: 12px 20px;
-  font-family: var(--font-heading);
-  font-size: 12px;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
+  gap: 16px;
+  padding: 24px;
+  background: var(--color-bg-card);
   border: 1px solid var(--color-border);
+  border-radius: 16px;
+  text-decoration: none;
+  color: inherit;
+  transition: all var(--transition-medium);
+}
+
+.contact-card:hover {
+  border-color: var(--color-text);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.contact-card.location {
+  cursor: default;
+}
+
+.contact-card-icon {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--color-bg);
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  color: var(--color-text);
+  flex-shrink: 0;
   transition: all var(--transition-fast);
 }
 
-.social-link:hover {
+.contact-card:hover .contact-card-icon {
   background: var(--color-text);
   color: var(--color-bg);
   border-color: var(--color-text);
 }
 
-/* Form */
-.contact-form {
-  background: var(--color-bg-secondary);
-  padding: 40px;
-  border: 1px solid var(--color-border);
+.contact-card-icon.linkedin {
+  background: rgba(10, 102, 194, 0.1);
+  color: #0a66c2;
+  border-color: rgba(10, 102, 194, 0.2);
 }
 
-.form-group {
-  margin-bottom: 24px;
+.contact-card:hover .contact-card-icon.linkedin {
+  background: #0a66c2;
+  color: white;
+  border-color: #0a66c2;
 }
 
-.form-group label {
-  display: block;
-  font-family: var(--font-heading);
-  font-size: 11px;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
+.contact-card-icon.github {
+  background: rgba(0, 0, 0, 0.05);
+  color: #333;
+  border-color: rgba(0, 0, 0, 0.1);
+}
+
+.contact-card:hover .contact-card-icon.github {
+  background: #333;
+  color: white;
+  border-color: #333;
+}
+
+.contact-card-content {
+  flex: 1;
+  min-width: 0;
+}
+
+.contact-card-content h3 {
+  font-family: var(--font-body);
+  font-size: 16px;
+  font-weight: 600;
+  text-transform: none;
+  letter-spacing: normal;
+  margin-bottom: 4px;
+}
+
+.contact-card-content p {
+  font-size: 13px;
   color: var(--color-text-muted);
-  margin-bottom: 8px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
-.submit-btn {
-  width: 100%;
-  padding: 16px 32px;
+.contact-card-arrow {
+  color: var(--color-text-muted);
+  flex-shrink: 0;
+  transition: all var(--transition-fast);
 }
 
-.submit-btn:disabled {
-  opacity: 0.7;
-  cursor: not-allowed;
+.contact-card:hover .contact-card-arrow {
+  color: var(--color-accent);
+  transform: translate(2px, -2px);
 }
 
 /* Footer */
@@ -107,20 +135,25 @@
 
 /* Responsive */
 @media (max-width: 768px) {
-  .contact-grid {
+  .contact-intro {
+    font-size: 16px;
+  }
+
+  .contact-cards {
     grid-template-columns: 1fr;
-    gap: 40px;
   }
 
-  .contact-form {
-    padding: 24px;
+  .contact-card {
+    padding: 20px;
   }
 
-  .contact-socials {
-    flex-direction: column;
+  .contact-card-icon {
+    width: 48px;
+    height: 48px;
   }
 
-  .social-link {
-    justify-content: center;
+  .footer {
+    margin-top: 60px;
+    padding-top: 30px;
   }
 }

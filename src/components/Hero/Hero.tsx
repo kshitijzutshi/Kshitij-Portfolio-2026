@@ -31,7 +31,7 @@ const features: FeatureData[] = [
     title: 'Impact-Driven',
     description: 'Every solution designed to deliver measurable results and business value.',
     stats: [
-      { label: 'Revenue Protected', value: '$XXX K+' },
+      { label: 'Revenue Protected', value: '$300K+' },
       { label: 'Bug Fixes Deployed', value: '150+' },
       { label: 'MTTD Improvement', value: '6x faster' },
       { label: 'SLA Compliance', value: '99.5%' },
